@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/1.1.0/weui.min.css">
+	<link rel="stylesheet" href="weui.css">
+	<link rel="stylesheet" href="weui2.css">
+	<script src="https://cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
+	<script type="text/javascript" src="weui.js"></script>
+</head>
+<style>
+	.hidden_hd{
+		display: none;
+	}
+	/*.weui-uploader__title{
+		text-align: left;
+		background: #ddd;
+		margin-top: 5px; 
+		padding:5px 0;
+	}*/
+	.cells-box{
+		height: 110px;
+		width: 100%;
+		background-color:#fff; 
+	}
+	.cells-box .weui-cells{
+		width: auto;
+		float: left;
+	}
+	.weui-flex-item{
+		text-align: center;
+	}
+	.weui-cells {
+    margin-top: 0;
+    }
+    .weui-uploader__input-box:after,
+    .weui-uploader__input-box:before {
+    
+}
+
+.weui-uploader__file {
+    width: 100%;
+}
+.weui-cell{
+	padding: 15px 5px;
+}
+
+.weui-uploader__input-box {
+    position: relative;
+    height: 77px;
+    text-align: center;
+    font-size: 12px;
+    color:#666;
+    border: 1px solid #D9D9D9;
+}
+.weui-uploader__input-box div{
+    position: absolute;
+    bottom:0;
+    font-size: 10px;
+    width: 100%;
+    color:#D9D9D9;
+
+}
+.weui-uploader__bd {
+    height: 79px;
+}
+.weui-cells__title {
+    margin-top: .77em;
+    margin-bottom: .3em;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #999999;
+    font-size: 14px;
+}
+</style>
+   <script>
+  $(function(){
+
+	  
+	  });    
+      
+      </script>
+
+<body ontouchstart >
+	<div class="weui-cells__title">照片请正向上传</div>
+	<h4 class="weui-cells__title">户口簿（<font color="red">首页（地址页）</font>、<font color="red">新生儿父亲页</font>和<font color="red">新生儿母亲页</font>）</h4>
+<div class="cells-box">
+	
+			<div class="weui-cells weui-cells_form" id="uploaderResidenceBookA">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <div class="weui-uploader__hd hidden_hd">
+                    <div class="weui-uploader__info"><span class="uploderCount" id="uploaderResidenceBookACount">0</span>/<span class="uploaderMaxCount" id="uploaderResidenceBookAMaxCount">1</span></div>
+                </div>
+                
+                	<div class="weui-uploader__bd ">
+                    <ul class="weui-uploader__files" id="uploaderFilesResidenceBookA"></ul>
+                    <div class="weui-uploader__input-box">
+                        <div class="">首页</div>
+                        <input id="uploaderInputResidenceBookA" class="weui-uploader__input" type="file" accept="image/*" multiple="" placeholder="首页">
+                    </div>
+                    </div>
+               
+
+            </div>
+        </div>
+</div>
+	
+
+			<div class="weui-cells weui-cells_form" id="uploaderResidenceBookB">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <div class="weui-uploader__hd hidden_hd">
+                    <div class="weui-uploader__info"><span class="uploderCount" id="uploaderResidenceBookBCount">0</span>/<span class="uploaderMaxCount" id="uploaderResidenceBookBMaxCount">1</span></div>
+                </div>
+                
+                	<div class="weui-uploader__bd ">
+                    <ul class="weui-uploader__files" id="uploaderFilesResidenceBookB"></ul>
+                    <div class="weui-uploader__input-box">
+                        <div class="">父亲页</div>
+                        <input id="uploaderInputResidenceBookB" class="weui-uploader__input" type="file" accept="image/*" multiple="" placeholder="首页">
+                    </div>
+                    </div>
+               
+
+            </div>
+        </div>
+    </div>
+
+    	<div class="weui-cells weui-cells_form" id="uploaderResidenceBookC">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <div class="weui-uploader__hd hidden_hd hidden_hd">
+                    <div class="weui-uploader__info"><span class="uploderCount" id="uploaderResidenceBookCCount">0</span>/<span class="uploaderMaxCount" id="uploaderResidenceBookCMaxCount">1</span></div>
+                </div>
+                	<div class="weui-uploader__bd ">
+                    <ul class="weui-uploader__files" id="uploaderFilesResidenceBookC"></ul>
+                    <div class="weui-uploader__input-box">
+                        <div class="">母亲页</div>
+                        <input id="uploaderInputResidenceBookC" class="weui-uploader__input" type="file" accept="image/*" multiple="" placeholder="首页">
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+ <h4 class="weui-cells__title">新生儿父母身份证（原件）正反两面</h4>
+ <div class="cells-box">
+ 		<div class="weui-cells weui-cells_form" id="uploaderIdCardA">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <div class="weui-uploader__hd hidden_hd">
+                    <p class="weui-uploader__title">新生儿父母身份证（原件）正反两面</p>
+                    <div class="weui-uploader__info"><span id="uploaderIdCardACount">0</span>/<span id="uploaderIdCardAMaxCount">1</span>
+                    </div>
+                </div>
+                <div class="weui-uploader__bd">
+                    <ul class="weui-uploader__files" id="uploaderFilesIdCardA" onclick=""></ul>
+                    <div class="weui-uploader__input-box">
+                    <div class="">父亲正面</div>
+                        <input id="uploaderInputIdCardA" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+ 
+ 
+ 		<div class="weui-cells weui-cells_form" id="uploaderIdCardB">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <div class="weui-uploader__hd hidden_hd">
+                    <p class="weui-uploader__title">新生儿父母身份证（原件）正反两面</p>
+                    <div class="weui-uploader__info"><span id="uploaderIdCardBCount">0</span>/<span id="uploaderIdCardBMaxCount">1</span>
+                    </div>
+                </div>
+                <div class="weui-uploader__bd">
+                    <ul class="weui-uploader__files" id="uploaderFilesIdCardB" onclick=""></ul>
+                    <div class="weui-uploader__input-box">
+                    <div class="">父亲反面</div>
+                        <input id="uploaderInputIdCardB" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+ 		<div class="weui-cells weui-cells_form" id="uploaderIdCardC">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <div class="weui-uploader__hd hidden_hd">
+                    <p class="weui-uploader__title">新生儿父母身份证（原件）正反两面</p>
+                    <div class="weui-uploader__info"><span id="uploaderIdCardCCount">0</span>/<span id="uploaderIdCardMaxCCount">1</span>
+                    </div>
+                </div>
+                <div class="weui-uploader__bd">
+                    <ul class="weui-uploader__files" id="uploaderFilesIdCardC" onclick=""></ul>
+                    <div class="weui-uploader__input-box">
+                    <div class="">母亲正面</div>
+                        <input id="uploaderInputIdCardC" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+ 		<div class="weui-cells weui-cells_form" id="uploaderIdCardD">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <div class="weui-uploader__hd hidden_hd">
+                    <p class="weui-uploader__title">新生儿父母身份证（原件）正反两面</p>
+                    <div class="weui-uploader__info"><span id="uploaderIdCardDCount">0</span>/<span id="uploaderIdCardMaxDCount">1</span>
+                    </div>
+                </div>
+                <div class="weui-uploader__bd">
+                    <ul class="weui-uploader__files" id="uploaderFilesIdCardD" onclick=""></ul>
+                    <div class="weui-uploader__input-box">
+                    <div class="">母亲反面</div>
+                        <input id="uploaderInputIdCardD" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+ </div>
+    <h4 class="weui-cells__title">结婚证（<font color="red">男方结婚证</font>和<font color="red">女方结婚证</font>）</h4>
+<div class="cells-box">
+	
+		<div class="weui-cells weui-cells_form" id="uploaderMarrCardA">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <div class="weui-uploader__hd hidden_hd">
+                    <p class="weui-uploader__title">结婚证（<font color="red">男方结婚证</font>和<font color="red">女方结婚证</font>）
+                    </p>
+                    <div class="weui-uploader__info"><span id="uploaderMarrCardACount" class="count">0</span>/<span id="uploaderMarrCardAMaxCount" class="maxCount">1</span>
+                    </div>
+                </div>
+                <div class="weui-uploader__bd">
+                    <ul class="weui-uploader__files" id="uploaderFilesMarrCardA"></ul>
+                    <div class="weui-uploader__input-box">
+                    <div class="">南方正面</div>
+                        <input id="uploaderInputMarrCardA" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+	
+
+		<div class="weui-cells weui-cells_form" id="uploaderMarrCardB">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <div class="weui-uploader__hd hidden_hd">
+                    <p class="weui-uploader__title">结婚证（<font color="red">男方结婚证</font>和<font color="red">女方结婚证</font>）
+                    </p>
+                    <div class="weui-uploader__info"><span id="uploaderMarrCardBCount" class="count">0</span>/<span id="uploaderMarrCardBMaxCount" class="maxCount">1</span>
+                    </div>
+                </div>
+                <div class="weui-uploader__bd">
+                    <ul class="weui-uploader__files" id="uploaderFilesMarrCardB"></ul>
+                    <div class="weui-uploader__input-box">
+                    <div class="">男方反面</div>
+                        <input id="uploaderInputMarrCardB" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+<h4 class="weui-cells__title">生育服务证正反两面<h4>
+ <div class="cells-box">
+ 
+ 		<div class="weui-cells weui-cells_form" id="uploaderBeaa">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <div class="weui-uploader__hd hidden_hd">
+                    <p class="weui-uploader__title">生育服务证正反两面</p>
+                    <div class="weui-uploader__info"><span id="uploaderBearACount">0</span>/<span id="uploaderBearAMaxCount">1</span>
+                    </div>
+                </div>
+                <div class="weui-uploader__bd">
+                    <ul class="weui-uploader__files" id="uploaderFileBearA"></ul>
+                    <div class="weui-uploader__input-box">
+                    <div class="">生育证正面</div>
+                        <input id="uploaderInputBearA" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+ 	
+
+
+ 		<div class="weui-cells weui-cells_form" id="uploaderBeaB">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <div class="weui-uploader__hd hidden_hd">
+                    <p class="weui-uploader__title">生育服务证正反两面</p>
+                    <div class="weui-uploader__info"><span id="uploaderBearBCount">0</span>/<span id="uploaderBearBMaxCount">1</span>
+                    </div>
+                </div>
+                <div class="weui-uploader__bd">
+                    <ul class="weui-uploader__files" id="uploaderFileBearB"></ul>
+                    <div class="weui-uploader__input-box">
+                    <div class="">生育证反面</div>
+                        <input id="uploaderInputBearB" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+ 
+
+ </div>
+<h4 class="weui-cells__title">新生儿医学出生证明正反两面</h4>
+ <div class="cells-box">
+ 	
+ 		<div class="weui-cells weui-cells_form" id="uploaderBirthCert">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <div class="weui-uploader__hd hidden_hd">
+                    <p class="weui-uploader__title">新生儿医学出生证明正反两面</p>
+                    <div class="weui-uploader__info"><span id="uploaderBirthCertCount">0</span>/<span id="uploaderBirthCertMaxCount">1</span>
+                    </div>
+                </div>
+                <div class="weui-uploader__bd">
+                    <ul class="weui-uploader__files" id="uploaderFileBirthCert"></ul>
+                    <div class="weui-uploader__input-box">
+                    <div class="">出生证明正面</div>
+                        <input id="uploaderInputBirthCert" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+ 	</div>
+ 	
+ 		<div class="weui-cells weui-cells_form" id="uploaderBirthCertB">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <div class="weui-uploader__hd hidden_hd">
+                    <p class="weui-uploader__title">新生儿医学出生证明正反两面</p>
+                    <div class="weui-uploader__info"><span id="uploaderBirthCertCountB">0</span>/<span id="uploaderBirthCertMaxCountB">1</span>
+                    </div>
+                </div>
+                <div class="weui-uploader__bd">
+                    <ul class="weui-uploader__files" id="uploaderFileBirthCertB"></ul>
+                    <div class="weui-uploader__input-box">
+                    <div class="">出生证明反面</div>
+                        <input id="uploaderInputBirthCertB" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 	</div>
+
+   
+<h4 class="weui-cells__title">成都市新生儿入户申请表</h4>
+ <div class="cells-box">
+ 	
+ 		<div class="weui-cells weui-cells_form" id="uploaderApplyForm">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <div class="weui-uploader__hd hidden_hd">
+                    <p class="weui-uploader__title">成都市新生儿入户申请表</p>
+                    <div class="weui-uploader__info"><span id="uploaderApplyFormCount">0</span>/<span id="uploaderApplyFormMaxCount">1</span>
+                    </div>
+                </div>
+                <div class="weui-uploader__bd">
+                    <ul class="weui-uploader__files" id="uploaderFileApplyForm"></ul>
+                    <div class="weui-uploader__input-box">
+                    <div class="">入户申请表</div>
+                        <input id="uploaderInputApplyFormt" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 	</div>
+
+    
+<div class="weui-btn-area">
+    <a href="javascript:" class="weui-btn weui-btn_primary" onclick="submit()">上传</a>
+</div>
+<!-- loading toast -->
+<div id="loadingToast" style="display:none;">
+    <div class="weui-mask_transparent"></div>
+    <div class="weui-toast">
+        <i class="weui-loading weui-icon_toast"></i>
+        <p class="weui-toast__content">正在上传...</p>
+    </div>
+</div>
+
+    <script type="text/javascript">
+
+        function submit() {
+            var i = 0;
+            $(".weui-cells_form").each(function () {
+                var id = $(this).attr('id');
+                if (!(id === "uploaderHoboMarri" || id === "uploaderLiveCard")) {
+                    var count = parseInt($("#" + id + "Count").text());
+                    var max = parseInt($("#" + id + "MaxCount").text());
+                    i = i + max - count;
+                    if (max !== count) {
+                        weui.alert($(this).find("p").text() + "未上传完!");
+                    }
+                }
+            });
+            if (i === 0) {
+
+                if ($('#loadingToast').css('display') === 'none') {
+                    $('#loadingToast').fadeIn(100);
+                }
+
+                count = uploadCustomFileList.length;
+                uploadCustomFileList.forEach(function (file) {
+                    file.upload();
+                });
+            }
+        }
+
+
+        function op(category, maxCount) {
+            var option = {
+                url: '@Url.Action("UpFile", "Newborn")',
+                auto: false,
+                type: 'file',
+                fileVal: 'fileVal',
+                compress: {
+                    width: 1600,
+                    height: 1600,
+                    quality: 1
+                },
+                onBeforeQueued: function onBeforeQueued(files) {
+                    if (["image/jpg", "image/jpeg", "image/png", "image/gif"].indexOf(this.type) < 0) {
+                        weui.alert('请上传图片');
+                        return false;
+                    }
+                    if (this.size > 10 * 1024 * 1024) {
+                        weui.alert('请上传不超过10M的图片');
+                        return false;
+                    }
+                    if (files.length > maxCount) {
+                        // 防止一下子选中过多文件
+                        weui.alert('最多只能上传' + maxCount + '张图片，请重新选择');
+                        return false;
+                    }
+                    if(files.length > maxCount){
+
+                    }
+                    if (parseInt($("#" + category + "Count").text()) + 1 > maxCount) {
+                        weui.alert('最多只能上传' + maxCount + '张图片');
+                        return false;
+                    }
+
+                    var count = parseInt($("#" + category + "Count").text()) + 1;
+
+                    $("#" + category + "Count").text(count);
+                },
+                onQueued: function onQueued() {
+                    console.log("onQueued");
+                    console.log(this);
+                    uploadCustomFileList.push(this);
+                },
+                onBeforeSend: function onBeforeSend(data, headers) {
+                    console.log("onBeforeSend");
+                    console.log(this, data, headers);
+                    $.extend(data, { category: category, name: category + this.id }); // 可以扩展此对象来控制上传参数
+                },
+                onProgress: function onProgress(procent) {
+                    console.log("onProgress");
+                    console.log(this, procent);
+                },
+                onSuccess: function onSuccess(ret) {
+                    console.log(this, ret);
+                    count -= 1;
+                    if (count === 0) {
+                        location.replace('@Url.Action("Submit", "Newborn")');
+                    }
+                    var url = '@Url.Action("GetImg","Bll")' +
+                        '?serialNumber=' +
+                        ret["serialNumber"] +
+                        '&FileName=' +
+                        ret["name"];
+                    $("[data-id=" + this.id + "]").attr("style", "background-image: url("+url+")");
+                },
+                onError: function onError(err) {
+                    console.log("err");
+                    console.log(this, err);
+                }
+            };
+            return option;
+        }
+        /* 图片手动上传 */
+        var uploadCustomFileList = [];
+        var count = 0;
+        $(function () {
+            $(".weui-cells_form").each(function () {
+                var id = $(this).attr('id');
+                var max = parseInt($("#" + id + "MaxCount").text());
+
+                weui.uploader('#' + id, op(id, max));
+            });
+
+
+            $(".weui-uploader__files").each(function () {
+                viewImg($(this).attr('id'));
+            });
+        }
+        );
+
+        // 缩略图预览
+        function viewImg(id) {
+            document.querySelector('#' + id).addEventListener('click', function (e) {
+                var target = e.target;
+
+                while (!target.classList.contains('weui-uploader__file') && target) {
+                    target = target.parentNode;
+                }
+                if (!target) return;
+
+                var url = target.getAttribute('style') || '';
+                if (url) {
+                    url = url.match(/url\((.*?)\)/)[1].replace(/"/g, '');;
+                }
+                var gallery = weui.gallery(url, {
+                    className: 'custom-name',
+                    onDelete: function onDelete() {
+                        weui.confirm('确定删除该图片？', function () {
+                            var countId = id.replace(/Files/, "") + "Count";
+                            var count = parseInt($('#' + countId).text()) - 1;
+                            parseInt(count);
+                            console.log(count)
+                            console.log(isNaN(count))
+                            $('#' + countId).text(count);
+                            target.remove();
+                            gallery.hide();
+                        });
+                    }
+                });
+            });
+        }
+
+
+    </script>
+
+</body>
+</html>
+
